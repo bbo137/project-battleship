@@ -1,4 +1,4 @@
-import { Gameboard } from "../src/gameboard"
+import Gameboard from "../src/gameboard"
 
 
 test('add a ship horizontally of length 3 to the gameboard', () => {
@@ -72,6 +72,12 @@ test('add a ship horizontally of length 3 to the gameboard', () => {
     game.placeShip(2, 3, 3, 'row');
     game.placeShip(6, 3, 2, 'col');
     expect(game.isValidPlacement(1,3,3,'col')).toBe(false);
+  });
+
+  test('test invalid placement', () => {
+    const game = Gameboard();
+    game.placeShip(0,0,5,'col');
+    expect(game.isValidPlacement(2,0,3,'col')).toBe(false);
   });
 
   test('test valid placement', () => {

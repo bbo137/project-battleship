@@ -15,7 +15,7 @@ function Gameboard() {
       return false;
 
     const shipRow = (y === 0)? [3, shipLen + 1] : [3, shipLen + 2];
-    const shipCol = (y === 0)? [shipLen + 1, 2] : [shipLen + 2, 3];
+    const shipCol = (y === 0)? [shipLen + 2, 2] : [shipLen + 2, 3];
     const shipDir = position === 'row' ? shipRow : shipCol;
 
     const row = x - 1;
