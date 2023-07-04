@@ -166,7 +166,7 @@ function addPopUp(winner) {
   popUp.classList.add('pop-up');
   shadow.classList.add('shadow');
   content.classList.add('content');
-  text.classList.add('text');
+  text.classList.add('win-text');
   text.textContent = `${winner} win this time!`;
   button.classList.add('continue');
   button.textContent = 'continue';

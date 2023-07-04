@@ -200,3 +200,20 @@
     left: 50vw;
     transform: translate(-50%, -50%);
 }
+
+:global .win-text {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline;
+    max-width: 500px;
+    font-size: 24px;
+    margin: 30px;
+    font-weight: 700;
+}
+
+:global .continue{
+    border-radius: 8px;
+    font-size: 20px;
+    min-height: 40px;
+    min-width: 200px;
+    margin: 25px;
+}
