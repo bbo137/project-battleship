@@ -11,5 +11,4 @@ function Ship(length) {
 	return { length, hits, hit, getHits, isSunk};
 }
 
-
-module.exports = { Ship };
+export { Ship };

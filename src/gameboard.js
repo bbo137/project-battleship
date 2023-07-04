@@ -1,4 +1,4 @@
-import { Ship } from './ship';
+import { Ship } from "./ship";
 
 function Gameboard() {
   const grid = Array.from({ length: 10 }, () => Array(10).fill());
@@ -48,7 +48,7 @@ function Gameboard() {
   const loadBoard = (shipLen) => {
     const row = parseInt(10 * Math.random(), 10);
     const col = parseInt(10 * Math.random(), 10);
-    const position = parseInt(Math.random(), 10) === 1 ? 'row' : 'col';
+    const position = parseInt(2 * Math.random(), 10) === 1 ? 'row' : 'col';
 
     if (isValidPlacement(row, col, shipLen, position)) {
       placeShip(row, col, shipLen, position);
@@ -62,6 +62,7 @@ function Gameboard() {
   const receiveAttack = (x, y) => {
     if (grid[x][y] !== undefined) {
       grid[x][y].hit();
+      attacked.add(`${x}, ${y}`);
       return true;
     }
     attacked.add(`${x}, ${y}`);
@@ -88,4 +89,4 @@ function Gameboard() {
   };
 }
 
-module.exports = { Gameboard };
+export default Gameboard;
