@@ -1,4 +1,4 @@
-import { Ship } from "../src/ship"
+import Ship from "../src/ship"
 
 
 test.only('increase hits by 1 when ship is hit once', () => {
