@@ -11,4 +11,4 @@ function Ship(length) {
   return { length, hits, hit, getHits, isSunk };
 }
 
-export { Ship };
+export default Ship;
